@@ -1,4 +1,11 @@
-# **simple shell**
+# **0x16. c - simple shell**
+This project is an implementation of the shell as final project for c code at ALX Africa
+
+## Description
+This is a shell written in `c`.
+## Environment
+The shell will be built and tested on Ubuntu 14.04 LTS.
+
 ## What is shell
 A shell is a program that executes other programs in response to text commands. A sophisticated shell can also change the environment in which other programs execute by passing named variables, a parameter list, or an input source.
 > A shell is a command-line interpreter and typcial operations performed by shell scripts including manipulation, program exectution, and printing text.
@@ -42,5 +49,5 @@ Write a first version of simple shell that can run commnads with their full path
 
 ## Exercises
 Write a command line interpreter
-The shell should: • Display a prompt and wait for the user to type a command. A command line always ends with a new line. • The prompt is displayed again each time a command has been executed. • The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features. • The command lines are made only of one word. No arguments will be passed to programs. • If an executable cannot be found, print an error message and display the prompt again. • Handle errors. • You have to handle the “end of file” condition (Ctrl+D)
+The shell should: • Display a prompt and wait for the user to type a command. A command line always ends with a new line. • The prompt is displayed again each time a command has been executed. • The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features. • The command lines are made only of one word. No arguments will be passed to programs. • If an executable cannot be found, print an error message and display the prompt again. • Handle errors. • You have to handle the “end of file” condition (Ctrl+D).
 
