@@ -5,6 +5,9 @@ This project is an implementation of the shell as final project for c code at AL
 This is a shell written in `c`.
 ## Environment
 The shell will be built and tested on Ubuntu 14.04 LTS.
+## Collaborators
+1. <a href="https://github.com/BLDhound" style="font-size: 11px;" target="_blank">Lekarri Kaila</a>
+2. <a href="https://github.com/Mamsana" style="font-size: 11px;" target="_blank">Alice Mamsana</a>
 
 ## What is shell
 A shell is a program that executes other programs in response to text commands. A sophisticated shell can also change the environment in which other programs execute by passing named variables, a parameter list, or an input source.
