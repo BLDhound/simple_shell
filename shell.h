@@ -1,3 +1,6 @@
+#ifndef SHELL_H
+#define SHELL_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,9 +12,17 @@
 #include <time.h>
 #include <stdbool.h>
 
+#define BUFFER_SIZE 256
+#define ENV_SEPARATOR "="
+#define ESCAPE_SEPARATOR "#"
+#define PATH_SEPARATOR ":"
+#define COMMAND_SEPARATOR ":\n"
+#define SEPARATORS " \n"
+#define PROMPT "$ "
+
 /* environment variables */
 extern char **environ;
-
+environment_t *_getenv(environment_t *prmEnviron, char *prmName);
 /* handle built ins */
 int checker(char **cmd, char *buf);
 void prompt_user(void);
