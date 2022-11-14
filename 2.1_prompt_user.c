@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - prototype
+ * main - promps user to write their input
  * Return: 0
  */
 int main(void)
