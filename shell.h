@@ -23,15 +23,20 @@
 /* environment variables */
 extern char **environ;
 environment_t *_getenv(environment_t *prmEnviron, char *prmName);
+extern __sighandler_t signal(int __sig, __sighandler_t __handler);
 /* handle built ins */
 int checker(char **cmd, char *buf);
 void prompt_user(void);
 void handle_signal(int m);
+char **tokenizer(char *line);
+char **test_path(char **path, char *command);
 int handle_builtin(char **command, char *line);
 void exit_cmd(char **command, char *line);
 
+void print_env(void);
+
 /* string handlers */
-int_strcmp(char *s1, char *s2);
+int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
 int _strncmp(char *s1, char *s2, int n);
 char *_strdup(char *s);
