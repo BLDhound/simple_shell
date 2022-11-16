@@ -4,6 +4,12 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+/*
+ * main - Entry point
+ *
+ * Return: Always 0 (success)
+ */
+
 int main(int argc, char *argv[])
 {
 	int pid = 0;
