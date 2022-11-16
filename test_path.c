@@ -3,7 +3,7 @@
 /**
  * test_path - function that checks weather path entered by user is valid
  * @path: tokenized path
- * @command: user entered 
+ * @command: user entered
  *
  * Return: path appended with command
  * NULL on failure

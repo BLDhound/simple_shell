@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * main - function that splits string and returns array of each word 
+ * main - function that splits string and returns array of each word
  *
  * Return: 0
  */
