@@ -49,4 +49,6 @@ char *find_path(void);
 /* buffers */
 void free_buffers(char **buf);
 
-
+/* fork + wait + execve */
+void main(void)
+int main(void)

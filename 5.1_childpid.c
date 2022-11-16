@@ -1,17 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <systypes.h>
 #include <sys/wait.h>
 #include <unistd.h>
 
-/*
- * main - suspends execution of calling process
+/**
+ * wait - using waitpid()
  *
- * Description: child process has to terminate
+ * Decription: prints exit status of children
  *
- * Return: Always 0 (Success)
+ * Return: 0 (Always)
  */
 
-int main(void)
+void wait(void)
 {
 	int i, stat;
 	pid_t pid[5];
@@ -36,14 +37,10 @@ int main(void)
 	}
 }
 
-#include <stdio.h>
-
-/*
- * main - checks the system call
+/**
+ * main - Entry point
  *
- * Description: waits for termination
- *
- * Returns: Always 0 (success)
+ * Return: 0 (Always)
  */
 
 int main(void)
