@@ -2,6 +2,9 @@
 
 /**
  * main - prints the environment
+ * @ac: argument count
+ * @av: argument vector
+ * @env: environment vector
  *
  * Return: Always 0.
  */
