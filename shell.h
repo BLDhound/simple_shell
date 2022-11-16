@@ -49,4 +49,21 @@ char *find_path(void);
 /* buffers */
 void free_buffers(char **buf);
 
+struct builtin
+{
+	char *env;
+	char *exit;
+} builtin;
+
+struct info
+{
+	int final_exit;
+	int ln_count;
+} info;
+
+struct flags
+{
+	bool interactive;
+} flags;
+
 
