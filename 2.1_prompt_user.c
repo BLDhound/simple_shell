@@ -2,19 +2,13 @@
 #include <stdlib.h>
 
 /**
- * main - promps user to write their input
- * Return: 0
+ * prompt_user - prompts user to write their input
+ * Return: nothing
  */
-int main(void)
+void prompt_user(void)
 {
-	char *buffer = malloc(1024);
-	size_t len = 1024;
-
-	while (1)
-	{
-		printf("$ ");
-		getline(&buffer, &len, stdin);
-		printf("%s", buffer);
-	}
-	return (0);
+	if ((isatty(STDIN_FILENO) == 1) && (isatty(STDOUT_FILENO) == 1))
+		flags.interactive = 1;
+	if (flags.interactive)
+		write(STDERR_FILENO, "$ ", 2);
 }
