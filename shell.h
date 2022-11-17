@@ -12,14 +12,6 @@
 #include <time.h>
 #include <stdbool.h>
 
-#define BUFFER_SIZE 256
-#define ENV_SEPARATOR "="
-#define ESCAPE_SEPARATOR "#"
-#define PATH_SEPARATOR ":"
-#define COMMAND_SEPARATOR ":\n"
-#define SEPARATORS " \n"
-#define PROMPT "$ "
-
 /* environment variables */
 extern char **environ;
 extern __sighandler_t signal(int __sig, __sighandler_t __handler);
@@ -30,6 +22,7 @@ void prompt_user(void);
 void handle_signal(int m);
 char **tokenizer(char *line);
 char **test_path(char **path, char *command);
+char *append_path(char *path, char *command);
 int handle_builtin(char **command, char *line);
 void exit_cmd(char **command, char *line);
 
