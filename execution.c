@@ -24,5 +24,5 @@ void execution(char *cp, char **cmd)
 		exit(98);
 	}
 	else
-		wait(&ststus);
+		wait(&status);
 }
