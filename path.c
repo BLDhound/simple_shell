@@ -1,28 +1,27 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <sys/wait.h>
+#include "shell.h"
 
 /**
- * main - Entry point
- * @argc: argument count
- * @argv: argument vector
- *
- * Return: Always 0 (success)
+ * find_path - locates path from global environment
+ * Return: NULL
  */
-
-int main(int argc, char *argv[])
+char *find_path(void)
 {
-	int pid = 0;
+	int x;
+	char **env = environ, *path = NULL;
 
-	for (int i = 0; i < argc; i++)
+	while (*env)
 	{
-		for (pid = fork() != 0)
+		if (_strncmp(*env, "PATH=", 5) == 0)
 		{
-			printf("Arg%d: %c\n", i, *argv[i]);
-			return (0);
+			path = *env;
+			while (*path && x < 5)
+			{
+				path++;
+				x++;
+			}
+			return (path);
 		}
+		env++;
 	}
-	return (0);
+	return (NULL);
 }
