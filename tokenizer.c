@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * tokenizer - creates token
+ * tokenizer - creates token from input`
  * @line: input to be tokenized
  * Return: array of strings
  */
@@ -29,7 +29,7 @@ char **tokenizer(char *line)
 		bufp++;
 	}
 	tokens = malloc(sizeof(char *) * (tokensize + 1));
-	token = strok(buf, delim);
+	token = strtok(buf, delim);
 	while (token)
 	{
 		tokens[index] = _strdup(token);
@@ -38,7 +38,7 @@ char **tokenizer(char *line)
 			free(tokens);
 			return (NULL);
 		}
-		token = strok(NULL, delim);
+		token = strtok(NULL, delim);
 		index++;
 	}
 	tokens[index] = '\0';
