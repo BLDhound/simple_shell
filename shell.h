@@ -22,8 +22,8 @@
 
 /* environment variables */
 extern char **environ;
-environment_t *_getenv(environment_t *prmEnviron, char *prmName);
 extern __sighandler_t signal(int __sig, __sighandler_t __handler);
+
 /* handle built ins */
 int checker(char **cmd, char *buf);
 void prompt_user(void);
@@ -49,8 +49,6 @@ char *find_path(void);
 /* buffers */
 void free_buffers(char **buf);
 
-<<<<<<< HEAD
-=======
 struct builtin
 {
 	char *env;
@@ -68,5 +66,4 @@ struct flags
 	bool interactive;
 } flags;
 
-
->>>>>>> test
+#endif
