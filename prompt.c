@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "shell.h"
 
 /**
  * main - prompts user to input command
