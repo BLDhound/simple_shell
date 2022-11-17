@@ -42,18 +42,21 @@ char *find_path(void);
 /* buffers */
 void free_buffers(char **buf);
 
+/* builtin handler */
 struct builtin
 {
 	char *env;
 	char *exit;
 } builtin;
 
+/* info */
 struct info
 {
 	int final_exit;
 	int ln_count;
 } info;
 
+/* flags */
 struct flags
 {
 	bool interactive;
