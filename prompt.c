@@ -1,20 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "shell.h"
 
 /**
- * main - prompts user to input command
- * Return: 0
+ * prompt_user - function that prints $ to prompt user to input command
+ * Return: nothing
  */
-int main(void)
+void prompt_user(void)
 {
-	char *buffer = malloc(1024);
-	size_t len = 1024;
-
-	while(1)
-	{
-		printf("$ ");
-		getline(&buffer, &len, stdin);
-		printf("%s", buffer);
-	}
-	return (0);
+	if ((isatty(STDIN_FILENO) == 1) && (isatty(STDOUT_FILENO) == 1))
+		flags.interactive = 1;
+	if (flags.interactive)
+		write(STDERR_FILENO, "$ ", 2);
 }
