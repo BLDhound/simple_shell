@@ -1,3 +1,6 @@
+#ifndef SHELL_H
+#define SHELLL_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -57,3 +60,4 @@ typedef struct flags
 	bool interactive;
 } flags;
 
+#endif /* SHELL_H */
