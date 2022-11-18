@@ -27,6 +27,7 @@ int main(int ac, char **av, char *envp[])
 		linesize = getline(&line, &bufsize, stdin);
 		if (linesize < 0)
 			break;
+
 		info.ln_count++;
 		if (line[linesize - 1] == '\n')
 			line[linesize - 1] = '\0';
