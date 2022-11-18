@@ -43,22 +43,33 @@ char *find_path(void);
 /* buffers */
 void free_buffers(char **buf);
 
-/* builtin handler */
-struct builtin
+/**
+ *struct builtin - handles builtin functions
+ *@env: builtin command environment
+ *@exit: exits function
+ */
+typedef struct builtin
 {
 	char *env;
 	char *exit;
 } builtin;
 
-/* info */
-struct info
+/**
+ *struct info - prints output
+ *@final_exit: execute exit function
+ *@ln_count: count functions
+ */
+typedef struct info
 {
 	int final_exit;
 	int ln_count;
 } info;
 
-/* flags */
-struct flags
+/**
+ *struct flags - command type
+ *@interactive: boolean data type
+ */
+typedef struct flags
 {
 	bool interactive;
 } flags;
