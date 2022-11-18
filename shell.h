@@ -43,19 +43,19 @@ char *find_path(void);
 /* buffers */
 void free_buffers(char **buf);
 
-typedef struct builtin
+struct builtin
 {
 	char *env;
 	char *exit;
 } builtin;
 
-typedef struct info
+struct info
 {
 	int final_exit;
 	int ln_count;
 } info;
 
-typedef struct flags
+struct flags
 {
 	bool interactive;
 } flags;
