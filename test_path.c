@@ -10,7 +10,7 @@
 char *test_path(char **path, char *command)
 {
 	int i = 0;
-	char output;
+	char *output;
 
 	while (path[i])
 	{
